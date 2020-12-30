@@ -1,0 +1,75 @@
+*,::after,::before{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    
+    
+}
+
+h2{
+    color:white;
+}
+
+h4::after {
+    content: '';
+    position: relative;
+    top: 54px;
+    left: 0px;
+    width: 90px;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2b9fd8, #1d6895);
+}
+
+body{
+    background-color:	rgb(190,190,190);
+
+    
+}
+
+.clickOnPage{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    position:absolute;
+    stroke:black;
+    background:radial-gradient(rgb(100, 165, 230),rgb(0, 0, 0));
+    z-index:200;
+    transform:scale(0);
+    transform-origin:center;
+    animation: clickAnim 0.65s linear;
+
+}
+@keyframes clickAnim{
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+    50%{
+        transform:scale(2);
+        opacity:0.75;
+    }
+    100%{
+        transform:scale(1);
+        opacity:0;
+
+    }
+
+}
+
+    .wrapper {
+        width: 20%;
+        height: 100%;
+        margin: 100px auto;
+      }
+
+a{
+    font-size:25px;
+}
+.navbar-toggler{
+    background-color:red ;
+}
+.navbar-b.navbar-reduce .navbar-toggler span{
+    
+    background-color: white;
+}
