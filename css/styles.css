@@ -1,0 +1,304 @@
+*, ::after, ::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#home {
+    background-image: url('../img/fond1.0.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+}
+
+#preloader-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-image: url('../img/hyperespace1.3.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: #14212e; */
+}
+
+.loader {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 50vh;
+}
+
+h2 {
+    color: white;
+}
+
+h4::after {
+    content: '';
+    position: relative;
+    top: 54px;
+    left: 0px;
+    width: 90px;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2b9fd8, #1d6895);
+}
+
+body {
+    background-color: white;
+}
+
+.clickOnPage {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    stroke: black;
+    background: radial-gradient(rgb(100, 165, 230), rgb(0, 0, 0));
+    z-index: 200;
+    transform: scale(0);
+    transform-origin: center;
+    animation: clickAnim 0.4s linear;
+}
+
+@keyframes clickAnim {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.wrapper {
+    width: 20%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+.color {
+    color: black;
+    font-size: 25px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: white;
+}
+
+#Parcours-text {
+    background-color: #4f5b62;
+    z-index: 5;
+}
+
+#Parcours {
+    background-color: #4f5b62;
+    transform: skew(0, 5deg);
+    z-index: 5;
+}
+
+#Parcours::before {
+    z-index: -10;
+    background-color: #000a12;
+    transform: skew(0, -10deg);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+footer {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+div a i {
+    color: #0079ae;
+}
+
+h4 {
+    color: white;
+}
+
+div i {
+    color: #474847;
+}
+
+div p {
+    color: #474847;
+    font-weight: bold;
+}
+
+
+@keyframes navbar {
+    0% {
+        background-color: rgba(0,0,0,0);
+    }
+    
+    100% {
+        background-color:#023e58;
+    }
+}
+
+.backgroundNav{
+    animation: navbar 0.5s linear;
+    background-color:#023e58;
+}
+
+
+@keyframes navbarEnlever {
+    0% {
+        background-color:#023e58;
+    }
+    
+    100% {
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+.backgroundNavEnlever{
+    animation: navbarEnlever 0.5s linear;
+    background-color: rgba(0,0,0,0);
+}
+
+i:hover{
+    color:#023e58;
+}
+
+.flex-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+
+  .input-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 100px;
+    max-width: 1000px;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .input {
+    width: 25px;
+    height: 25px;
+    background-color: #2C3E50;
+    position: relative;
+    border-radius: 50%;
+  }
+  .input:hover {
+    cursor: pointer;
+  }
+  .input::before, .input::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50;
+    width: 12vw;
+    height: 5px;
+ 
+  }
+  .input::before {
+    left: calc(-12vw + 12.5px);
+  }
+  .input::after {
+    right: calc(-12vw + 12.5px);
+  }
+  .input.active {
+    background-color: #2C3E50;
+  }
+  .input.active::before {
+    background-color: #2C3E50;
+  }
+  .input.active::after {
+    background-color: #AEB6BF;
+  }
+ 
+  
+  .input.active ~ .input, .input.active ~ .input::before, .input.active ~ .input::after {
+    background-color: #AEB6BF;
+  }
+  
+  .input span::before, .input span::after {
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+  }
+  .input span::after {
+    content: attr(data-year);
+    top: 25px;
+    transform: translateX(-50%);
+    font-size: 20px;
+  }
+  .input span::before {
+    content: attr(data-info);
+    top: -65px;
+    width: 70px;
+    transform: translateX(-5px) rotateZ(-45deg);
+    font-size: 20px;
+    text-indent: -10px;
+  }
+  
+  .description-flex-container {
+    width: 80vw;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 100px;
+    max-width: 1000px;
+  }
+  .description-flex-container p {
+    margin-top: 0;
+    display: none;
+  }
+  .description-flex-container p.active {
+    display: block;
+  }
+
+.contact {
+
+    background-color: #1d6895;
+}
+
+
+
+  
+
+  
+
+  
+  
+  
+ 
+  
